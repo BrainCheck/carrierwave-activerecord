@@ -13,7 +13,6 @@ Gem::Specification.new do |gem|
   gem.description   = %q{Store CarrierWave uploaded files using ActiveRecord.}
   gem.summary       = %q{Store CarrierWave uploaded files using ActiveRecord.}
 
-
   files_to_include = %w{
     LICENSE
     README.md
@@ -40,8 +39,6 @@ Gem::Specification.new do |gem|
 
   # CarrierWave has broken in 0.x releases.
   gem.add_runtime_dependency 'carrierwave', '~> 0.8.0'
-
-  # ActiveRecord 3.3 is unlikely, but prevent it just in case.
   gem.add_runtime_dependency 'activerecord', '~> 4.0.0.beta'
 
   gem.add_development_dependency 'sqlite3', '~> 1.3'
