@@ -1,6 +1,6 @@
 module CarrierWave
   module Storage
-    module ActiveRecord 
+    module ActiveRecord
 
       class File
 
