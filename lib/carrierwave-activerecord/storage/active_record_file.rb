@@ -3,7 +3,7 @@ module CarrierWave
     module ActiveRecord
 
       class ActiveRecordFile < ::ActiveRecord::Base
-
+        # This need to be the same table , Maybe migration required ?? 
         self.table_name = CarrierWave::Uploader::Base.active_record_tablename
 
         alias_method    :delete, :destroy
