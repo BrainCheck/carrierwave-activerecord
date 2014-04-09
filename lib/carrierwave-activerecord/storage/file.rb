@@ -16,7 +16,7 @@ module CarrierWave
         end
 
         def self.fetch! identifier
-          self.new ActiveRecordFile.find_by_identifier! identifier
+          self.new ActiveRecordFile.where(medium_hash: identifier).first
         end
 
         def self.delete_all
