@@ -5,13 +5,14 @@ module CarrierWave
       class File
 
         def self.create!(new_file, identifier)
-          attributes = { :identifier        => identifier,
-                         :original_filename => new_file.original_filename,
-                         :content_type      => new_file.content_type,
-                         :size              => new_file.size,
-                         :data              => new_file.read }
+          attributes = { :medium_hash       => identifier,
+                         :binary            => new_file.read }
 
-          self.new ActiveRecordFile.create! attributes
+          record = ActiveRecordFile.where(medium_hash: identifier).first
+          record = ActiveRecordFile.new if record.blank?
+          record.update_attributes(attributes)
+  
+          self.new record
         end
 
         def self.fetch! identifier
