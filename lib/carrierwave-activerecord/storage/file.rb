@@ -36,7 +36,7 @@ module CarrierWave
         end
 
         def read
-          file.data if file
+          file.binary if file
         end
 
         def size
