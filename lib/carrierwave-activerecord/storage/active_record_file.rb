@@ -7,13 +7,11 @@ module CarrierWave
         self.table_name = CarrierWave::Uploader::Base.active_record_tablename
 
         alias_method    :delete, :destroy
-        alias_attribute :read, :data
+        alias_attribute :read, :binary
+        alias_attribute :identifier, :medium_hash
 
-        attr_accessible :identifier,
-                        :original_filename,
-                        :content_type,
-                        :size,
-                        :data
+        attr_accessible :medium_hash,
+                        :binary
       end # ActiveRecordFile
 
     end # ActiveRecord
