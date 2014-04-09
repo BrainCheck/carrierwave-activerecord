@@ -44,7 +44,7 @@ module CarrierWave
         end
 
         def compute_url
-          uploader.default_url || begin
+          uploader.default_url || uploader.url || begin
             if defined? ::Rails.application.routes.url_helpers
               model = uploader.model
 
