@@ -2,7 +2,7 @@
 
 CarrierWave::ActiveRecord is a CarrierWave plugin which stores file data
 using ActiveRecord.  It relies on ActiveRecord for database
-independence.  At this time, it is tested against only SQLite.
+independence.  At this time, it is tested against only MySQL.
 
 ## Installation
 
