@@ -2,7 +2,7 @@
 
 CarrierWave::ActiveRecord is a CarrierWave plugin which stores file data
 using ActiveRecord.  It relies on ActiveRecord for database
-independence.  At this time, it is tested against only MySQL.
+independence.  At this time, it is tested against only SQLite.
 
 ## Installation
 
@@ -31,11 +31,9 @@ To use the ActiveRecord store, add the following to your uploader:
 By default, the gem uses a table named `carrier_wave_files` with the
 following columns:
 
-  * identifier: string
-  * original_filename: string
-  * content_type: string
-  * size: integer
-  * data: binary
+  * id: integer
+  * medium_hash: string
+  * binary: binary
 
 The table name is a CarrierWave configurable, e.g.:
 
