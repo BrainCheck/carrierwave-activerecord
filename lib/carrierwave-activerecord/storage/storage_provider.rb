@@ -32,7 +32,7 @@ module CarrierWave
         # mounted column.  The identifier should be nil if there is no filename.
         def identifier
           if uploader.filename
-            @identifier ||= "#{Digest::MD5.hexdigest(uploader.file.read)}.#{uploader.file.extension}"
+            @identifier ||= ((uploader.respond_to?(:unique_identifier) && uploader.unique_identifier) || "#{Digest::MD5.hexdigest(uploader.file.read)}.#{uploader.file.extension}")
           end
         end
 
