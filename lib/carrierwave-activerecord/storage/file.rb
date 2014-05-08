@@ -42,6 +42,10 @@ module CarrierWave
         def size
           file.size if file
         end
+        
+        def extension
+          file.identifier.split('.').last if file
+        end
 
         def content_type
           file.content_type if file
