@@ -12,6 +12,11 @@ module CarrierWave
 
         attr_accessible :medium_hash,
                         :binary
+        
+        def extension
+          self.medium_hash.split('.').last if self.medium_hash
+        end
+      
       end # ActiveRecordFile
 
     end # ActiveRecord
