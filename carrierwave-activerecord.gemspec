@@ -38,7 +38,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
 
   # CarrierWave has broken in 0.x releases.
-  gem.add_runtime_dependency 'carrierwave', '> 0.10.0'
+  gem.add_runtime_dependency 'carrierwave', '>= 0.10.0'
   gem.add_runtime_dependency 'activerecord', '~> 4.0.0'
 
   gem.add_development_dependency 'sqlite3', '~> 1.3'
