@@ -25,8 +25,8 @@ module CarrierWave
         let(:file_properties) { { original_filename: 'o_sample.png',
                                   content_type:      'image/png',
                                   size:              123,
-                                  data:              1337,
-                                  read:              1337 } }
+                                  data:              'File content.',
+                                  read:              'File content.' } }
 
         let(:mock_rails_url_helpers) do
           article = mock 'Article 1'

@@ -10,8 +10,6 @@ module CarrierWave
         alias_attribute :read, :binary
         alias_attribute :identifier, :medium_hash
 
-        attr_accessible :medium_hash,
-                        :binary
         
         def extension
           self.medium_hash.split('.').last if self.medium_hash
