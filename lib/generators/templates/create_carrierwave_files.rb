@@ -3,6 +3,7 @@ class CreateCarrierwaveFiles < ActiveRecord::Migration
     create_table :carrier_wave_files do |t|
       t.string :medium_hash
       t.string :original_filename
+      t.integer :size
       t.binary :binary
 
       t.timestamps
