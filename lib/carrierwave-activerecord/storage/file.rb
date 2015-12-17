@@ -7,6 +7,7 @@ module CarrierWave
         def self.create!(new_file, identifier)
           attributes = { :medium_hash       => identifier,
                          :original_filename => new_file.original_filename,
+                         :size              => new_file.size,
                          :binary            => new_file.read }
 
           record = ActiveRecordFile.where(medium_hash: identifier).first
