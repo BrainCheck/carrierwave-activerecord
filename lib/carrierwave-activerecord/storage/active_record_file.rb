@@ -10,11 +10,9 @@ module CarrierWave
         alias_attribute :read, :binary
         alias_attribute :identifier, :medium_hash
 
-        
         def extension
           self.medium_hash.split('.').last if self.medium_hash
         end
-      
       end # ActiveRecordFile
 
     end # ActiveRecord
